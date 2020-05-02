@@ -13,10 +13,13 @@ public class myBinarySearchTreeNode {
     myBinarySearchTreeNode(int[] A){
         // creates a new Binary Search Tree rooted at the first value in the array
         /// by inserting elements into the tree in the order they are given in A.
+        //This for loop will traverse
+        // through the tree and add the integers they come.
         myValue = A[0];
         for(int i = 1; i < A.length; i++){
             insert(A[i]);
         }
+
     }
 
     public void insert(int inValue){
@@ -27,7 +30,8 @@ public class myBinarySearchTreeNode {
         //    * in the left subtree,
         //    * or in the right subtree.
         // If the value already exists in the tree, no action is taken.
-
+        // the if statements check to see if the new value is smaller,
+        // greater than or if it is the same to place in the right position.
         if(inValue > myValue){
             if(right == null){
                 right = new myBinarySearchTreeNode(inValue);
